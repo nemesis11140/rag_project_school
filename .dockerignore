@@ -1,0 +1,17 @@
+.venv
+__pycache__
+*.pyc
+.git
+.gitignore
+.vscode
+.idea
+model
+backups
+runtime
+*.log
+log
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

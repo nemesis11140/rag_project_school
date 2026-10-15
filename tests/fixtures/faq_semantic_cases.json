@@ -1,0 +1,22 @@
+[
+  {"query": "学费多少钱", "candidate": "学费要交多少啊？", "equivalent": true},
+  {"query": "如何申请奖学金", "candidate": "怎么申请奖学金？", "equivalent": true},
+  {"query": "我弄丢了学生证怎么办", "candidate": "学生证丢了怎么办？", "equivalent": true},
+  {"query": "寝室门禁是几点", "candidate": "宿舍门禁时间是几点？", "equivalent": true},
+  {"query": "一卡通怎么补办", "candidate": "校园卡怎么补办？", "equivalent": true},
+  {"query": "休学期间还需要缴纳学费吗", "candidate": "休学要交学费吗？", "equivalent": true},
+  {"query": "你有什么用", "candidate": "校园卡有什么用？", "equivalent": false},
+  {"query": "这个有什么用", "candidate": "校园卡有什么用？", "equivalent": false},
+  {"query": "校园卡怎么挂失", "candidate": "校园卡怎么补办？", "equivalent": false},
+  {"query": "奖学金申请需要什么材料", "candidate": "怎么申请奖学金？", "equivalent": false},
+  {"query": "不申请奖学金会怎么样", "candidate": "怎么申请奖学金？", "equivalent": false},
+  {"query": "国家奖学金和助学金有啥区别", "candidate": "怎么申请奖学金？", "equivalent": false},
+  {"query": "请病假不提供医院证明可以吗", "candidate": "请病假要医院证明吗？", "equivalent": false},
+  {"query": "研究生怎么申请奖学金", "candidate": "怎么申请奖学金？", "equivalent": false},
+  {"query": "明年学费什么时候交", "candidate": "学费什么时候交？", "equivalent": false},
+  {"query": "校园卡怎么补办，退学要怎么办", "candidate": "校园卡怎么补办？", "equivalent": false},
+  {"query": "怎么申请助学金", "candidate": "怎么申请奖学金？", "equivalent": false},
+  {"query": "必修课选上了怎么办", "candidate": "必修课没选上怎么办？", "equivalent": false},
+  {"query": "宿舍为什么不让用电吹风", "candidate": "宿舍里能用电吹风吗？", "equivalent": false},
+  {"query": "退学期间要交学费吗", "candidate": "休学期间要交学费吗？", "equivalent": false}
+]

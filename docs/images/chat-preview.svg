@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">校园智能问答助手界面布局示意</title>
+  <desc id="desc">根据项目模板绘制的界面布局示意，左侧为会话列表和账号状态，右侧为聊天区域。非运行截图，对话文字为占位示例。</desc>
+  <defs><style>text { font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif; } .body { font-size: 17px; fill: #334155; } .small { font-size: 14px; fill: #64748b; }</style></defs>
+  <rect width="1200" height="720" rx="20" fill="#eef2f7"/>
+  <text x="38" y="40" font-size="17" font-weight="700" fill="#475569">rag_project_school · 校园智能问答助手</text>
+  <rect x="853" y="16" width="309" height="34" rx="17" fill="#e2e8f0"/>
+  <text x="1007" y="39" text-anchor="middle" font-size="14" fill="#475569">界面布局示意 · 非实际运行截图</text>
+  <rect x="24" y="64" width="1152" height="632" rx="16" fill="#ffffff"/>
+  <path d="M40 64 H292 V696 H40 Q24 696 24 680 V80 Q24 64 40 64" fill="#172339"/>
+  <circle cx="69" cy="113" r="22" fill="#334764"/>
+  <text x="69" y="120" text-anchor="middle" font-size="22" fill="#ffffff">学</text>
+  <text x="104" y="109" font-size="20" font-weight="700" fill="#ffffff">智能问答助手</text>
+  <text x="104" y="133" font-size="14" fill="#a9b9d1">上海交通大学</text>
+  <rect x="44" y="166" width="228" height="46" rx="9" fill="#4079ee"/>
+  <text x="158" y="196" text-anchor="middle" font-size="17" fill="#ffffff">＋ 新建对话</text>
+  <text x="46" y="254" font-size="14" fill="#a9b9d1">对话记录</text>
+  <rect x="44" y="273" width="228" height="46" rx="8" fill="#2d4160"/>
+  <text x="60" y="302" font-size="16" fill="#ffffff">奖学金申请咨询</text>
+  <text x="60" y="355" font-size="16" fill="#c4cfe0">校园卡补办</text>
+  <text x="60" y="404" font-size="16" fill="#c4cfe0">转专业流程</text>
+  <line x1="44" y1="580" x2="272" y2="580" stroke="#334764"/>
+  <circle cx="62" cy="614" r="16" fill="#334764"/>
+  <text x="87" y="620" font-size="15" fill="#ffffff">student_01</text>
+  <text x="237" y="620" font-size="14" fill="#a9b9d1">退出</text>
+  <circle cx="51" cy="655" r="5" fill="#47d7ab"/>
+  <text x="66" y="660" font-size="14" fill="#a9b9d1">系统状态区域</text>
+  <circle cx="337" cy="110" r="21" fill="#eaf1ff"/>
+  <text x="337" y="117" text-anchor="middle" font-size="22" fill="#4079ee">交</text>
+  <text x="374" y="105" font-size="21" font-weight="700" fill="#1e293b">小交 · 校园问答助手</text>
+  <text x="374" y="130" class="small">基于学校官方文档，提供校园事务咨询服务</text>
+  <line x1="292" y1="151" x2="1176" y2="151" stroke="#e2e8f0"/>
+  <text x="734" y="183" text-anchor="middle" class="small">对话内容示意</text>
+  <rect x="811" y="208" width="294" height="52" rx="12" fill="#4079ee"/>
+  <text x="833" y="241" font-size="17" fill="#ffffff">奖学金怎么申请？</text>
+  <circle cx="337" cy="303" r="18" fill="#eaf1ff"/>
+  <text x="337" y="309" text-anchor="middle" font-size="17" fill="#4079ee">交</text>
+  <rect x="371" y="285" width="655" height="124" rx="12" fill="#f1f5f9"/>
+  <text x="394" y="320" class="body">这里展示助手返回的回答内容。</text>
+  <text x="394" y="352" class="body">系统优先匹配高频问答，未命中时检索校园文档，</text>
+  <text x="394" y="384" class="body">并结合相关上下文生成答案。</text>
+  <rect x="811" y="435" width="294" height="52" rx="12" fill="#4079ee"/>
+  <text x="833" y="468" font-size="17" fill="#ffffff">那需要什么材料？</text>
+  <text x="395" y="531" class="small">多轮追问可结合历史对话补全问题主题</text>
+  <line x1="292" y1="580" x2="1176" y2="580" stroke="#e2e8f0"/>
+  <rect x="331" y="602" width="806" height="53" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="351" y="635" font-size="16" fill="#94a3b8">请输入您的问题...</text>
+  <rect x="1086" y="611" width="40" height="35" rx="8" fill="#4079ee"/>
+  <text x="1106" y="635" text-anchor="middle" font-size="20" fill="#ffffff">➤</text>
+  <text x="734" y="679" text-anchor="middle" font-size="13" fill="#64748b">按 Enter 发送消息 | 基于《2025学生手册》《2025教职工手册》</text>
+</svg>

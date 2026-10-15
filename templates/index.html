@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海交通大学 - 智能校园问答助手</title>
+    <link rel="stylesheet" href="/static/css/style.css?v=20261011-reset">
+</head>
+<body>
+    <div class="auth-overlay hidden" id="auth-overlay">
+        <div class="auth-card" role="dialog" aria-modal="true" aria-labelledby="auth-title" aria-describedby="auth-description">
+            <button type="button" class="auth-close" id="auth-close" aria-label="关闭登录弹窗" onclick="closeAuth()">×</button>
+            <div class="auth-brand">
+                <span>🎓</span>
+                <div>
+                    <h1 id="auth-title">登录校园智能问答助手</h1>
+                    <p id="auth-description">登录后即可提问，并保存你的对话记录</p>
+                </div>
+            </div>
+
+            <div class="auth-tabs">
+                <button type="button" class="auth-tab active" data-mode="login" onclick="switchAuthMode('login')">登录</button>
+                <button type="button" class="auth-tab" data-mode="register" onclick="switchAuthMode('register')">注册</button>
+            </div>
+
+            <form class="auth-form" id="login-form" onsubmit="submitLogin(event)">
+                <label for="login-username">用户名</label>
+                <input id="login-username" name="username" autocomplete="username" minlength="3" maxlength="32" required>
+                <label for="login-password">密码</label>
+                <input id="login-password" name="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" required>
+                <button class="auth-submit" type="submit">登录</button>
+                <div class="auth-links">
+                    <button type="button" class="auth-link" onclick="switchAuthMode('reset')">忘记密码？</button>
+                </div>
+            </form>
+
+            <form class="auth-form hidden" id="register-form" onsubmit="submitRegister(event)">
+                <label for="register-username">用户名</label>
+                <input id="register-username" name="username" autocomplete="username" minlength="3" maxlength="32" required>
+                <p class="field-hint">3～32 位中文、字母、数字或下划线</p>
+                <label for="register-password">密码</label>
+                <input id="register-password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required>
+                <label for="register-confirm-password">确认密码</label>
+                <input id="register-confirm-password" name="confirm_password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required>
+                <button class="auth-submit" type="submit">创建账号</button>
+            </form>
+
+            <form class="auth-form hidden" id="reset-form" onsubmit="submitPasswordReset(event)">
+                <label for="reset-username">用户名</label>
+                <input id="reset-username" name="username" autocomplete="username" minlength="3" maxlength="32" required>
+                <label for="reset-password">新密码</label>
+                <input id="reset-password" name="new_password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required>
+                <p class="field-hint">8～128 个字符</p>
+                <label for="reset-confirm-password">确认新密码</label>
+                <input id="reset-confirm-password" name="confirm_password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required>
+                <button class="auth-submit" type="submit">重置密码</button>
+                <div class="auth-links">
+                    <button type="button" class="auth-link" onclick="switchAuthMode('login')">返回登录</button>
+                </div>
+            </form>
+
+            <p class="auth-error" id="auth-error" role="alert"></p>
+            <p class="auth-success hidden" id="auth-success" role="status"></p>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">🎓</span>
+                    <div class="logo-text">
+                        <h1>智能问答助手</h1>
+                        <p>上海交通大学</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-nav">
+                <button class="new-chat-btn" type="button" onclick="newConversation()">
+                    <span>＋</span> 新建对话
+                </button>
+                <div class="nav-section">
+                    <h3>对话记录</h3>
+                    <div class="conversation-list" id="conversation-list"></div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="user-panel">
+                    <span class="user-avatar">👤</span>
+                    <span class="current-user" id="current-user">访客</span>
+                    <button type="button" class="logout-btn" id="login-btn" onclick="showAuth()">登录 / 注册</button>
+                    <button type="button" class="logout-btn hidden" id="logout-btn" onclick="logout()">退出</button>
+                </div>
+                <div class="system-status" id="system-status">
+                    <span class="status-dot offline"></span>
+                    <span class="status-text">系统未就绪</span>
+                </div>
+                <p class="copyright">© 2025 上海交通大学</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-title">
+                        <span class="avatar">🤖</span>
+                        <div>
+                            <h2>小交 - 校园问答助手</h2>
+                            <p class="subtitle">基于学校官方文档，为您提供准确的校园事务咨询服务</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-messages" id="chat-messages"></div>
+
+                <div class="chat-input-area">
+                    <div class="input-wrapper">
+                        <input type="text" id="query-input" placeholder="请输入您的问题..." autocomplete="off">
+                        <button id="send-btn" onclick="sendQuery()">
+                            <span class="send-icon">➤</span>
+                        </button>
+                    </div>
+                    <p class="input-hint">按 Enter 发送消息 | 基于《2025学生手册》《2025教职工手册》</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/js/script.js?v=20261011-reset"></script>
+</body>
+</html>

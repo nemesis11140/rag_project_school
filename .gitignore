@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# UV 虚拟环境
+.venv/
+.python-version
+
+# 模型文件
+model/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 日志
+*.log
+log/
+
+# 环境变量
+.env
+.env.local
+.env.*
+!.env.example
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.tmp
+*.bak
+
+# 数据迁移备份（包含账号、历史对话和向量）
+backups/
+runtime/
+
+# 知识文档、业务问答和训练数据由部署环境单独提供
+data/*
+!data/README.md
+
+# 知识文档、业务问答和训练数据由部署环境单独提供
+data/*
+!data/README.md
