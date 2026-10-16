@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . .
-ARG APP_VERSION=development
+ARG APP_VERSION=latest
 LABEL org.opencontainers.image.title="rag_project_school" \
       org.opencontainers.image.version=$APP_VERSION
 

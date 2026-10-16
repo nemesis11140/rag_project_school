@@ -14,10 +14,10 @@
 
 ```bash
 # Docker Hub
-export APP_IMAGE=zcong11140/rag_project_school:20261015-fix1
+export APP_IMAGE=zcong11140/rag_project_school:latest
 
 # 或使用杭州阿里 ACR
-# export APP_IMAGE=crpi-3h7l0sjo9afn3xet.cn-hangzhou.personal.cr.aliyuncs.com/zzc11140/rag_project_school:20261015-fix1
+# export APP_IMAGE=crpi-3h7l0sjo9afn3xet.cn-hangzhou.personal.cr.aliyuncs.com/zzc11140/rag_project_school:latest
 
 bash deploy.sh backups/rag-project-school-db-backup-20261012-151748
 ```
@@ -31,7 +31,7 @@ bash deploy.sh backups/rag-project-school-db-backup-20261012-151748
 ## 已完成数据部署，只升级应用
 
 ```bash
-export APP_IMAGE=zcong11140/rag_project_school:20261015-fix1
+export APP_IMAGE=zcong11140/rag_project_school:latest
 bash deploy.sh
 ```
 
